@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Agregar Computadora</title>
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+</head>
+<body>
+
+<div class="span3">
+    <h2>Alta</h2>
+    <form method="POST" th:action="@{/Computadora/guardar}" th:object="${computadora}">
+    <label>Id</label>
+    <input type="text" th:field="*{id}" th:value="*{id}" name="id" id="id" class="span3">
+    <label>marca</label>
+    <input type="text" th:field="*{marca}" th:value="*{marca}" name="marca" id="marca" class="span3">
+    <label>modelo</label>
+    <input  type="text" th:field="*{modelo}" th:value="*{modelo}" name="modelo" id="modelo" class="span3">
+    <label>precio</label>
+    <input  type="text" th:field="*{precio}" th:value="*{precio}" name="precio" id="precio" class="span3">
+    <label>ram</label>
+    <input  type="text" th:field="*{ram}" th:value="*{ram}" name="ram" id="ram" class="span3">
+     <label>HD</label>
+    <input  type="text" th:field="*{hd}" th:value="*{hd}" name="hd" id="hd" class="span3">
+     <label>procesador</label>
+    <input  type="text" th:field="*{procesador}" th:value="*{procesador}" name="procesador" id="procesador" class="span3">
+    <input type="submit" value="Sign up" class="btn btn-primary pull-right">
+    <div class="clearfix"></div>
+    </form>
+</div>
+</body>
+</html>
